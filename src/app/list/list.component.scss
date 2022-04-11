@@ -1,0 +1,40 @@
+.mat-elevation-z8 {
+  width: 100%;
+}
+
+mat-header-cell, mat-cell {
+  justify-content: center;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  justify-self: center;
+  padding-bottom: 10px;
+
+  div {
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    justify-self: center;
+
+    mat-button-toggle-group {
+      margin-right: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.listing {
+  margin: 30px;
+  border: 5px solid rgb(37, 91, 207);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  justify-self: center;
+}

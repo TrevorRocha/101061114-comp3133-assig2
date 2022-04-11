@@ -1,0 +1,32 @@
+
+<div class="test">
+  <div>
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    <mat-form-field  style="width: 100%">
+      <mat-label>Search</mat-label>
+      <input matInput formControlName="search" />
+    </mat-form-field>
+    <br/>
+    <mat-button-toggle-group appearance="legacy" formControlName="condition">
+      <mat-button-toggle value="name">Name</mat-button-toggle>
+      <mat-button-toggle value="city">City</mat-button-toggle>
+      <mat-button-toggle value="postalCode">Postal Code</mat-button-toggle>
+    </mat-button-toggle-group>
+    <button type="submit">Search</button>
+  </form>
+  </div>
+  <br>
+  <button routerLink="/addListing" color="blue" >Add Listing</button>
+
+</div>
+<div class="listing" *ngFor="let listing of listings">
+  <h3><strong>Listing title: </strong>{{listing.listing_title}}</h3>
+  <p><strong>Listing description: </strong>{{listing.description}}</p>
+  <p><strong>Price</strong>: ${{listing.price}}</p>
+  <p><strong>Address</strong>: {{listing.street}} {{listing.city}} {{listing.postal_code}}</p>
+  <p><strong>City</strong>: {{listing.city}}</p>
+  <p><strong>postal Code</strong>: {{listing.postal_code}}</p>
+  <p><strong>Email</strong>: {{listing.email}}</p>
+  <button routerLink="/addbooking">Book</button>
+  <hr>
+</div>

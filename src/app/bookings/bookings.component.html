@@ -1,0 +1,12 @@
+<h1>Bookings</h1>
+
+
+<div class="booking-container" *ngFor="let booking of bookings">
+  <h3><strong>ID: </strong>{{booking.booking_id}}</h3>
+  <p><strong>Create Date: </strong>{{booking.booking_date}}</p>
+  <p><strong>Start Date</strong>: ${{booking.booking_start}}</p>
+  <p><strong>End Date</strong>: {{booking.booking_end}}</p>
+  <p><strong>Username</strong>: {{booking.username}}</p>
+  <button routerLink="/addbooking">Book</button>
+  <hr>
+</div>

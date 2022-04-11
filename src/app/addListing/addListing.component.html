@@ -1,0 +1,35 @@
+<div fullscreen>
+  <h1>Add Listing</h1>
+
+    <form [formGroup]="listForm" (ngSubmit)="addListing()">
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="listingId" required placeholder="ID">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="listingTitle" required placeholder="Title">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="description" required placeholder="Description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="street" required placeholder="Street">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="city" required placeholder="City">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="postalCode" required placeholder="Postal Code">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="price" required placeholder="Price">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Add Listing</button>
+    </form>
+</div>
